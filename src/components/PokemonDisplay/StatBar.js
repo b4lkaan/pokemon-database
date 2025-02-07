@@ -5,7 +5,12 @@ import styles from './StatBar.module.css';
 
 function StatBar({ statName, statValue }) {
   const statPercentage = (statValue / 255) * 100;
-    const shortStatName = statName === 'special-attack' ? 'Sp. Atk' : statName === 'special-defense' ? 'Sp. Def' : statName;
+  const shortStatName =
+    statName === 'special-attack'
+      ? 'Sp. Atk'
+      : statName === 'special-defense'
+      ? 'Sp. Def'
+      : statName;
 
   const renderTooltip = (props) => (
     <Tooltip id={`tooltip-${statName}`} {...props}>
@@ -23,6 +28,7 @@ function StatBar({ statName, statValue }) {
             style={{ width: `${statPercentage}%` }}
           ></div>
         </div>
+        <div className={styles.statValue}>{statValue}</div> {/* Display stat value */}
       </div>
     </OverlayTrigger>
   );

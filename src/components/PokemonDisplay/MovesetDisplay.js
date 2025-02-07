@@ -1,4 +1,4 @@
-// src/components/MovesetDisplay.js (Modified with CSS Modules)
+// src/components/MovesetDisplay.js
 import React, { useState, useEffect } from 'react';
 import { Dropdown, Table } from 'react-bootstrap';
 import styles from './MovesetDisplay.module.css'; // Import CSS Module
@@ -47,7 +47,7 @@ function MovesetDisplay({ variant }) {
       <div className={styles.movesetDisplay}>
         <Dropdown>
           <Dropdown.Toggle variant="secondary" id="dropdown-basic">
-            {selectedMoveset ? `${selectedMoveset.name || 'Select Moveset'}` : 'Select Moveset'}
+            {selectedMoveset ? selectedMoveset.name : 'Choose a Moveset'} {/* Changed Label */}
           </Dropdown.Toggle>
 
           <Dropdown.Menu>
@@ -55,6 +55,8 @@ function MovesetDisplay({ variant }) {
               <Dropdown.Item
                 key={`${tier}-${movesetName}`}
                 onClick={() => handleMovesetSelect(tier, movesetName)}
+                className={selectedMoveset && selectedMoveset.name === movesetName ? styles.activeMoveset : ''} /* Add class for active moveset */
+
               >
                 {`${tier}: ${movesetName}`}
               </Dropdown.Item>

@@ -1,10 +1,11 @@
 /* src/components/PokemonDisplay/TypeBadge.module.css */
 .typeBadge {
-    display: inline-block;
-    padding: 0.25em 0.5em;
-    border-radius: 0.25em;
-    margin-right: 0.25em;
-    font-size: 0.75rem;
-    color: white;
-    text-transform: capitalize; /* Capitalize the type name */
-  }
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+  margin-right: 0.25em;
+  font-size: 0.75rem;
+  color: white;
+  text-transform: capitalize;
+  /* Darker background colors for better contrast */
+}

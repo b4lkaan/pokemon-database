@@ -1,10 +1,14 @@
 /* src/components/MovesetDisplay.module.css */
 .movesetDisplay {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 .movesetCard {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 1rem;
-  background-color: #fff; /* White background for contrast */
+border: 1px solid #ddd;
+border-radius: 10px;
+padding: 1rem;
+background-color: #fff;
+}
+
+.activeMoveset {
+background-color: #e9ecef; /* Light gray background for active moveset */
 }
