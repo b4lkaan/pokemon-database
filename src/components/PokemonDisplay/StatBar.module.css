@@ -1,0 +1,28 @@
+/* src/components/PokemonDisplay/StatBar.module.css */
+.statBarContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .statLabel {
+    width: 60px; /* Adjust as needed */
+    margin-right: 0.5rem;
+    font-size: 0.8rem;
+    text-align: right;
+  }
+  
+  .bar {
+    flex: 1; /* Take up remaining space */
+    height: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    overflow: hidden; /* Ensure the filled bar doesn't overflow */
+  }
+  
+  .barFill {
+    height: 100%;
+    background-color: #0d6efd; /* Bootstrap primary color - change as desired */
+    border-radius: 5px;
+    transition: width 0.3s ease; /* Smooth width transition */
+  }

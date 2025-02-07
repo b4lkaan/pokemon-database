@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import DataLoader from './components/DataLoader';
 import SearchBar from './components/SearchBar';
-import PokemonDisplay from './components/PokemonDisplay';
+import PokemonDisplay from './components/PokemonDisplay/PokemonDisplay';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import './App.css';
 
