@@ -8,7 +8,7 @@ function DataLoader({ onDataLoaded }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/updated_pokemon_database.json'); // Fetch from public folder
+        const response = await fetch(`${process.env.PUBLIC_URL}/updated_pokemon_database.json`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
